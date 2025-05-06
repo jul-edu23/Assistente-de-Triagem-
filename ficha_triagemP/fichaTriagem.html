@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Triagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container2">
+        <header>
+            <div class="imagem">
+                <img src="imagens/imagem.cabecalho.png" alt="Icone do site" id="icone-cabecalho">
+            </div>
+            <div class="titulo">
+                <h1>Assistente de Triagem</h1>
+            </div>
+        </header>
+        <main>
+            <div class="conteudo">
+                <div class="introdução">
+                    <div class="imagem">
+                        <img src="imagens/icon_pessoa.png" alt="icone de pessoa" id="icone-pessoa">
+                    </div>
+                    <div>
+                        <h2>Olá, senhor ....!</h2>
+                        <p>Por favor, preencha o formulário abaixo com atenção</p>
+                    </div>
+                </div>
+                <form>
+                    <div class="label">
+                        <label for="sintomas" class="caixaTexto">Sintomas
+                            <input type="text" placeholder="Digite seus sintomas...">
+                        </label>
+                    </div>
+                    <div class="label">
+                        <label for="alergias" class="caixaTexto">Alergias Conhecidas
+                            <input type="text" placeholder="Alergia à medicamentos, alimetos, etc...">
+                        </label>
+                    </div>
+                    <div class="label">
+                        <label for="doenças" class="caixaTexto">Doenças Crônicas
+                            <input type="text" placeholder="Diabetes, hipertensão, etc...">
+                        </label>
+                    </div>
+                    <div class="label">
+                        <label for="medicamentos" class="caixaTexto">Uso de medicamentos contínuos
+                            <input type="text" placeholder="Medicamentos que você toma regularmente...">
+                        </label>
+                    </div>
+                    <div class="label">
+                        <label for="historico familiar" class="caixaTexto">Histórico familiar relevante
+                            <input type="text" placeholder="Doenças na família, como câncer, doenças cardíacas, etc...">
+                        </label>
+                    </div>
+                    <div class="container">
+                        <div class="box">
+                            <label for="fuma">Fuma?
+                                <div>
+                                    <input type="radio" name="fuma" value="sim"> Sim
+                                    <input type="radio" name="fuma" value="não"> Não
+                                </div>
+                            </label>
+                        </div>
+                        <div class="box">
+                            <label for="bebe">Bebe?
+                                <div>
+                                    <input type="radio" name="bebe" value="sim"> Sim
+                                    <input type="radio" name="bebe" value="não"> Não
+                                </div>
+                            </label>
+                        </div>
+                        <div class="box">
+                            <label for="atividadeFisica">Pratica atividade física?</label>
+                            <div>
+                                <input type="radio" name="atividadeFisica" value="sim"> Sim
+                                <input type="radio" name="atividadeFisica" value="não"> Não
+                            </div>
+                        </div>
+                    </div>
+                    <div class="label">
+                        <label for="avaliaçãoDor"> Avaliação de dor (opcional)
+                            <p id="subescrita">Em caso de dor, qual o nível de dor nesse momento de 0 a 10? </p>
+                            <div id="botão">
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="1">
+                                    <span>1</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="2">
+                                    <span>2</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="3">
+                                    <span>3</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="4">
+                                    <span>4</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="5">
+                                    <span>5</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="6">
+                                    <span>6</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="7">
+                                    <span>7</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="8">
+                                    <span>8</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="9">
+                                    <span>9</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="avaliaçãoDor" value="10">
+                                    <span>10</span>
+                                </label>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="label">
+                        <button type="submit" id="abrirDialog">ENVIAR</button>
+                    </div>
+                </form>
+        </main>
+        <footer>
+            <p class="aviso">*Este chat não substitui o atendimento presencial em casos graves.</p>
+        </footer>
+    </div>
+    </div>
+    <div id="overlay"></div>
+    <dialog id="dialog">
+        <div class="dialog-container">
+            <div class="dialog-header">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-x-square" viewBox="0 0 16 16" id="fecharDialog">
+                        <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+                </div>
+            </div>
+            <div class="dialog-body">
+                <p>Agradecemos pelas informções. Aguarde, você sera atendido em breve</p>
+                <div class="dialog-flex">
+                    <div class="dialog-image">
+                        <img src="imagens/icon_pessoa.png" alt="icone de pessoa" id="icone-pessoa">
+                    </div>
+                    <div class="dialog-message">
+                        <p>Por favor, confirme que você preencheu todos os dados corretamente</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-actions">
+                <button id="closeDialog" class="btn-cancelar">Cancelar</button>
+                <button id="seguir" class="btn-confirmar">Confirmar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script>
+        //Cofiguraçao dos botoes do dialog e para abrir o dialog
+        const dialog = document.getElementById('dialog');
+        const btnAbrir = document.getElementById('abrirDialog');
+        const btnFechar = document.getElementById('closeDialog');
+
+        btnAbrir.addEventListener('click', (e) => {
+            e.preventDefault(); // impede o envio do formulário
+            dialog.showModal(); // abre o dialog
+        });
+
+        btnFechar.addEventListener('click', () => {
+            dialog.close(); // fecha o dialog pelo cancelar
+        });
+
+        fecharDialog.addEventListener('click', () => {
+            dialog.close(); // fecha o dialog pelo x
+        });
+
+        //controlar o desfoque do fundo
+        const overlay = document.getElementById('overlay');
+
+        btnAbrir.addEventListener('click', () => {
+            overlay.style.display = 'block';
+            dialog.showModal();
+        });
+
+        btnFechar.addEventListener('click', () => {
+            dialog.close();
+            overlay.style.display = 'none';
+        });
+
+        fecharDialog.addEventListener('click', () => {
+            dialog.close();
+            overlay.style.display = 'none';
+        });
+
+        btnConfirmar.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            formulario.submit();
+        });
+
+        // Seleciona todos os spans dentro do botão
+        const spans = document.querySelectorAll('#botão span');
+
+        // Adiciona um evento de clique para cada span
+        spans.forEach(span => {
+            span.addEventListener('click', () => {
+                // Alterna a classe 'marcado' no span clicado
+                span.classList.toggle('marcado');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
