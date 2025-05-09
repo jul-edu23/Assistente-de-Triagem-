@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #0000001a;
+    max-width: 480px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+/* Header */
+header {
+    background-color: #46827F;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.imagem {
+    margin-right: 10px;
+}
+
+#icone-cabecalho {
+    width: 56px;
+    height: 44px;
+}
+
+.titulo h1 {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Introdução */
+.introdução {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+#icone-pessoa {
+    width: 60px;
+    height: 67px;
+}
+
+.introdução p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Centro */
+.center {
+    text-align: center;
+    padding: 0 20px;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"] {
+    width: 250px;
+        max-width: 280px;
+        padding: 12px;
+        margin: 10px auto;
+        border: 2px solid #46827F;
+        border-radius: 8px;
+        font-size: 28px;
+        letter-spacing: 10px;
+        text-align: center;
+        color: #333;
+        display: block;
+    }
+    
+
+/* Botões */
+.btn {
+    padding: 14px;
+    font-size: 18px;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 280px;
+    display: block;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #247469;
+    color: white;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    margin-top: 30px; /* aumento do espaçamento */
+}
+
+/* Nota */
+.note {
+    margin-top: 15px;
+    font-size: 10px;
+    color: gray;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.token-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.token-area label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+.token-area input[type="text"] {
+    width: 250px;
+    max-width: 280px;
+    padding: 12px;
+    border: 2px solid #46827F;
+    border-radius: 8px;
+    font-size: 28px;
+    letter-spacing: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
