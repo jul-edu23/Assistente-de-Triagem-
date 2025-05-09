@@ -15,15 +15,17 @@
 
         .form-container {
             background: white;
-            padding: 30px;
+            padding: 0px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
 
         h1 {
-            color: #2c3e50;
+            text-align: left;
+            color: #ffffff;
             font-size: 24px;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            background-color: #46827F;
         }
 
         h2 {
@@ -36,7 +38,7 @@
         .section {
             margin: 20px 0;
             padding: 15px;
-            border: 1px solid #bdc3c7;
+            border: 1px solid #f9f9f9;
             border-radius: 5px;
             background-color: #f9f9f9;
         }
@@ -48,6 +50,7 @@
         }
 
         label {
+            background-color: transparent;
             display: block;
             color: #34495e;
             margin-bottom: 5px;
@@ -55,15 +58,17 @@
         }
 
         input, select {
+            background-color: transparent;
             width: 100%;
             padding: 8px;
-            border: 1px solid #bdc3c7;
-            border-radius: 4px;
+            border-top: #2c3e50;
+            border-left: #f5f5f5;
+            border-right: #f5f5f5;
         }
 
         hr {
             border: 0;
-            border-top: 1px solid #bdc3c7;
+            border-top: 1px solid #f9f9f9;
             margin: 25px 0;
         }
 
@@ -79,34 +84,58 @@
 
         .urgencia-btn {
             background-color: #f1c40f;
-            color: white;
-            padding: 10px 25px;
+            color: rgb(0, 0, 0);
+            padding: 10px 100px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             float: right;
+            stroke: #2c3e50;
         }
 
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            background-color: #46827F;
+            padding: 10px 20px;
+            border-radius: 10px 10px 0% 0%;
+            
         }
 
         .header h1 {
+            color: #ffffff;
+            font-size: 24px;
             margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+
+        .header h1::before {
+            content: '';
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-image: url('/img/healthcare.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }   
 
         .header .menu {
             display: flex;
-            gap: 15px;
+            gap: 20px;   
         }
 
         .menu a {
             text-decoration: none;
-            color: #46827F;
+            color: #ffffff;
             font-weight: bold;
+            font-size: 16px;
+        }
+        .inputdate{
+            height: 1px;
+            padding-bottom: 21px;
         }
     </style>
 </head>
@@ -127,11 +156,11 @@
             <div class="form-group">
                 <div>
                     <label>Data de nascimento</label>
-                    <input type="date">
+                    <input type="date" class="inputdate">
                 </div>
                 <div>
                     <label>CPF</label>
-                    <input type="number">
+                    <input type="text">
                 </div>
                 <div>
                     <label>Gênero</label>
