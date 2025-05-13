@@ -1,5 +1,9 @@
+html{
+    font-size: 20px;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;;
     background-color: #f2f2f2;
     display: flex;
     justify-content: center;
@@ -7,6 +11,27 @@ body {
     height: 100vh;
     margin: 0;
 }
+
+/* Hierarquia de títulos */
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 21px;
+    }
+
+    label, input, select, button, textarea {
+      font-size: 16px;
+    }
+
+    p, li {
+      font-size: 20px;
+    }
 
 .container {
     background-color: #ffffff;
@@ -23,7 +48,7 @@ header {
     height: 90px;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 15px 15px 0 0;
 }
 
@@ -37,7 +62,6 @@ header {
 }
 
 .titulo h1 {
-    font-size: 24px;
     color: #ffffff;
     margin: 0;
 }
@@ -56,7 +80,6 @@ header {
 }
 
 .introdução p {
-    font-size: 16px;
     margin: 0;
 }
 
@@ -71,29 +94,31 @@ label {
     display: block;
     margin-bottom: 10px;
 }
+
 input[type="text"] {
-    width: 250px;
+        width: 250px;
         max-width: 280px;
         padding: 12px;
         margin: 10px auto;
         border: 2px solid #46827F;
         border-radius: 8px;
-        font-size: 28px;
         letter-spacing: 10px;
         text-align: center;
         color: #333;
         display: block;
     }
     
+a{
+    text-decoration: none;
+}
 
 /* Botões */
 .btn {
+    width: 280px;
     padding: 14px;
-    font-size: 18px;
     margin: 10px auto;
     cursor: pointer;
     border-radius: 8px;
-    width: 80%;
     max-width: 280px;
     display: block;
     font-weight: bold;
@@ -106,6 +131,7 @@ input[type="text"] {
 }
 
 .btn-danger {
+    width: 280px;
     background-color: #d9534f;
     color: white;
     border: none;
@@ -115,8 +141,8 @@ input[type="text"] {
 /* Nota */
 .note {
     margin-top: 15px;
-    font-size: 10px;
-    color: gray;
+    font-size: 13px;
+    color: rgb(0, 0, 0);
     padding: 0 20px;
     text-align: center;
 }
@@ -132,13 +158,12 @@ input[type="text"] {
 
 .token-area label {
     font-weight: bold;
-    font-size: 16px;
-    color: #333;
+    color: #000000;
     text-align: center;
     margin: 0;
 }
 
-.token-area input[type="text"] {
+.token-area input[type="number"] {
     width: 250px;
     max-width: 280px;
     padding: 12px;
@@ -147,7 +172,6 @@ input[type="text"] {
     font-size: 28px;
     letter-spacing: 10px;
     text-align: center;
-    font-weight: bold;
-    color: #333;
+    color: #000000;
 }
 
