@@ -1,9 +1,39 @@
+/* Padronização de fontes para todo o sistema */
+html {
+    font-size: 20px;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: #fffdfd;
   }
-  
+
+  /* Hierarquia de títulos */
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+label, input, select, button, textarea {
+    font-size: 16px;
+}
+
+p, li {
+    font-size: 20px;
+}
+
+span{
+  font-size: 30px;
+}
+
   /* Cabeçalho */
   header {
     background-color: #417d78;
@@ -11,7 +41,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 10px;
   }
   
   .logo-area {
@@ -21,8 +51,8 @@ body {
   }
   
   .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   
   /* Navegação */
@@ -41,7 +71,6 @@ body {
   
   h1 {
     color: #417d78;
-    font-size: 1.6rem;
     margin-bottom: 0.5rem;
   }
   
@@ -56,7 +85,6 @@ body {
     color: white;
     border: none;
     padding: 1rem;
-    font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
     align-self: center;
@@ -72,7 +100,6 @@ body {
     border: none;
     cursor: pointer;
     margin-bottom: 1rem;
-    font-size: 1rem;
   }
   
   /* Formulário */
@@ -141,4 +168,8 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 8px;
     cursor: pointer;
+  }
+
+  a{
+    text-decoration: none;
   }
