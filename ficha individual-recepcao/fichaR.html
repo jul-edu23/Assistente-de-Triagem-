@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assistente de Triagem</title>
-    <style>
 
+    <style>
         /* Padronização de fontes para todo o sistema */
         html {
             font-size: 20px;
@@ -24,15 +25,20 @@
             font-size: 21px;
         }
 
-        label, input, select, button, textarea {
+        label,
+        input,
+        select,
+        button,
+        textarea {
             font-size: 16px;
         }
 
-        p, li {
+        p,
+        li {
             font-size: 20px;
         }
 
-        span{
+        span {
             font-size: 30px;
         }
 
@@ -57,15 +63,20 @@
             font-size: 21px;
         }
 
-        label, input, select, button, textarea {
+        label,
+        input,
+        select,
+        button,
+        textarea {
             font-size: 16px;
         }
 
-        p, li {
+        p,
+        li {
             font-size: 20px;
         }
 
-        span{
+        span {
             font-size: 30px;
         }
 
@@ -73,7 +84,7 @@
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
@@ -108,7 +119,8 @@
             font-weight: 500;
         }
 
-        input, select {
+        input,
+        select {
             width: 100%;
             padding: 8px;
             border: 1px solid #bdc3c7;
@@ -130,12 +142,117 @@
             cursor: pointer;
             margin-top: 20px;
         }
+
+        /* Cores das fichas de urgência */
+        .ficha-vermelha {
+            background-color: #ff4d4d;
+            color: #fff;
+            border-radius: 15px;
+            padding: 12px;
+            font-size: 15px;
+            margin-top: 16px;
+        }
+
+        .ficha-laranja {
+            background-color: #ff9900;
+            color: #fff;
+            font-size: 15px;
+            border-radius: 15px;
+            padding: 12px;
+            font-weight: bold;
+            margin-top: 16px
+        }
+
+        .ficha-amarela {
+            background-color: #ffe066;
+            color: #333;
+            font-size: 15px;
+            border-radius: 15px;
+            padding: 12px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+
+        .ficha-verde {
+            background-color: #4caf50;
+            color: #fff;
+            font-size: 15px;
+            border-radius: 15px;
+            padding: 12px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+
+        .ficha-azul {
+            background-color: #2196f3;
+            color: #fff;
+            border-radius: 15px;
+            padding: 12px;
+            margin-top: 16px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .section-resultado {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .section-resultado h2 {
+            margin: 0;
+            flex: 1;
+            z-index: 2;
+        }
+
+
+        /* Exemplo de cor dinâmica para cada ficha */
+        .ficha-vermelha {
+            border-left-color: #ff4d4d !important;
+        }
+
+        .ficha-laranja {
+            border-left-color: #ff9900 !important;
+        }
+
+        .ficha-amarela {
+            border-left-color: #ffe066 !important;
+            color: #333 !important;
+        }
+
+        .ficha-verde {
+            border-left-color: #4caf50 !important;
+        }
+
+        .ficha-azul {
+            border-left-color: #2196f3 !important;
+        }
+
+        .resultado {
+            min-width: 200px;
+            max-width: 400px;
+            padding: 16px;
+            border-radius: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 16px;
+            text-align: center;
+            display: block;
+        }
     </style>
+
 </head>
+
 <body>
     <div class="form-container">
         <h1>Assistente de Triagem</h1>
-        <h2>Ficha individual</h2>
+        <div class="section section-resultado">
+            <h2>Ficha individual</h2>
+            <div id="resultado" class="resultado">
+                Aguardando resultados...
+            </div>
+        </div>
 
         <div class="section">
             <h3>Nome do Paciente</h3>
@@ -219,7 +336,23 @@
             </div>
         </div>
 
-        <a href=" ../cadastropag/index.html"> <button class="voltar-btn">Voltar</button></a> 
+        <a href=" ../cadastropag/index.html"> <button class="voltar-btn">Voltar</button></a>
     </div>
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const resultado = JSON.parse(localStorage.getItem('resultadoTriagem'));
+            const resultadoDiv = document.getElementById('resultado');
+            if (resultado && resultadoDiv) {
+                resultadoDiv.textContent = `${resultado.ficha}`;
+                resultadoDiv.className = 'resultado ficha-' + resultado.cor;
+                resultadoDiv.style.display = 'block';
+            } else {
+                resultadoDiv.textContent = 'Nenhum resultado disponível.';
+                resultadoDiv.className = 'resultado';
+            }
+        });
+    </script>
 </body>
+
 </html>

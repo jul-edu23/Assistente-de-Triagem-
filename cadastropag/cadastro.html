@@ -29,7 +29,7 @@
       <div class="linha">
         <div class="campo">
           <label for="data-nascimento">Data de nascimento:</label>
-          <input type="text" id="data-nascimento" placeholder="dd/mm/aaaa" />
+          <input type="date" id="data-nascimento" placeholder="dd/mm/aaaa" />
         </div>
 
         <div class="campo">
@@ -84,5 +84,21 @@
     
     </form><a href="../loginToken/loginToken.html" class="btn-salvar">SALVAR E GERAR TOKEN</a>
   </main>
+
+  <script src="../ficha_triagemP/script.js">
+    // Exemplo de uso ao clicar em "SALVAR E GERAR TOKEN"
+document.querySelector('.btn-salvar').addEventListener('click', function(e) {
+    const dataNascimento = document.getElementById('data-nascimento').value;
+    const idade = calcularIdadePorDataNascimento(dataNascimento);
+    if (idade === null || isNaN(idade)) {
+        alert('Data de nascimento inválida!');
+        e.preventDefault();
+        return;
+    }
+    // Salva a idade no localStorage para usar na ficha de triagem
+    localStorage.setItem('idadePaciente', idade);
+});
+  </script>
+
 </body>
 </html>
