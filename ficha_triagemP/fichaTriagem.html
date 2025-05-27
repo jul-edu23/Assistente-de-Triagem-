@@ -29,115 +29,113 @@
                         <p>Por favor, preencha o formulário abaixo com atenção</p>
                     </div>
                 </div>
-                <form>
-                    <div class="label">
-                        <label for="sintomas" class="caixaTexto">Sintomas
-                            <input type="text" placeholder="Digite seus sintomas...">
-                        </label>
+                <form id="triagemForm">
+
+                     <div class="label">
+                        <label for="sintomasInput" class="caixaTexto">Sintomas </label>
+                        <div class="tag-input-container">
+                            <div id="sintomasTags" class="tags-display"></div>
+                            <input type="text" id="sintomasInput" class="tag-input-field"
+                                placeholder="Digite seus sintomas...">
+                            <ul id="sintomasSugestoes" class="suggestions-list"></ul>
+                        </div>
                     </div>
+
                     <div class="label">
-                        <label for="alergias" class="caixaTexto">Alergias Conhecidas
-                            <input type="text" placeholder="Alergia à medicamentos, alimetos, etc...">
-                        </label>
+                        <label for="alergiasInput" class="caixaTexto">Alergias:</label>
+                        <div class="tag-input-container">
+                            <div id="alergiasTags" class="tags-display"></div>
+                            <input type="text" id="alergiasInput" class="tag-input-field"
+                                placeholder="Comece a digitar uma alergia...">
+                            <ul id="alergiasSugestoes" class="suggestions-list"></ul>
+                        </div>
                     </div>
+
                     <div class="label">
-                        <label for="doenças" class="caixaTexto">Doenças Crônicas
-                            <input type="text" placeholder="Diabetes, hipertensão, etc...">
-                        </label>
+                        <label for="doencaCronicaInput" class="caixaTexto">Doenças Crônicas:</label>
+                        <div class="tag-input-container">
+                            <div id="doencaCronicaTags" class="tags-display"></div>
+                            <input type="text" id="doencaCronicaInput" class="tag-input-field"
+                                placeholder="Diabetes, hipertensão, etc...">
+                            <ul id="doencaCronicaSugestoes" class="suggestions-list"></ul>
+                        </div>
                     </div>
+
                     <div class="label">
-                        <label for="medicamentos" class="caixaTexto">Uso de medicamentos contínuos
-                            <input type="text" placeholder="Medicamentos que você toma regularmente...">
-                        </label>
+                        <label for="medicacoesInput" class="caixaTexto">Medicações em Uso:</label>
+                        <div class="tag-input-container">
+                            <div id="medicacoesTags" class="tags-display"></div>
+                            <input type="text" id="medicacoesInput" class="tag-input-field"
+                                placeholder="Comece a digitar uma medicação...">
+                            <ul id="medicacoesSugestoes" class="suggestions-list"></ul>
+                        </div>
                     </div>
+
                     <div class="label">
-                        <label for="historico familiar" class="caixaTexto">Histórico familiar relevante
-                            <input type="text" placeholder="Doenças na família, como câncer, doenças cardíacas, etc...">
-                        </label>
+                        <label for="historicoFamiliarInput" class="caixaTexto">Histórico de Doenças na Família:</label>
+                        <div class="tag-input-container">
+                            <div id="historicoFamiliarTags" class="tags-display"></div>
+                            <input type="text" id="historicoFamiliarInput" class="tag-input-field"
+                                placeholder="Ex: Diabetes, Câncer...">
+                            <ul id="historicoFamiliarSugestoes" class="suggestions-list"></ul>
+                        </div>
                     </div>
+
                     <div class="container">
                         <div class="box">
-                            <label for="fuma">Fuma?
-                                <div>
-                                    <input type="radio" name="fuma" value="sim"> Sim
-                                    <input type="radio" name="fuma" value="não"> Não
-                                </div>
-                            </label>
+                            <label>Fuma?</label>
+                            <div class="radio-group">
+                                <input type="radio" name="fuma" value="sim" id="fumaSim"> <label for="fumaSim">Sim</label>
+                                <input type="radio" name="fuma" value="não" id="fumaNao"> <label for="fumaNao">Não</label>
+                            </div>
                         </div>
                         <div class="box">
-                            <label for="bebe">Bebe?
-                                <div>
-                                    <input type="radio" name="bebe" value="sim"> Sim
-                                    <input type="radio" name="bebe" value="não"> Não
-                                </div>
-                            </label>
+                            <label>Bebe?</label>
+                            <div class="radio-group">
+                                <input type="radio" name="bebe" value="sim" id="bebeSim"> <label for="bebeSim">Sim</label>
+                                <input type="radio" name="bebe" value="não" id="bebeNao"> <label for="bebeNao">Não</label>
+                            </div>
                         </div>
                         <div class="box">
-                            <label for="atividadeFisica">Pratica atividade física?</label>
-                            <div>
-                                <input type="radio" name="atividadeFisica" value="sim"> Sim
-                                <input type="radio" name="atividadeFisica" value="não"> Não
+                            <label>Pratica atividade física?</label>
+                            <div class="radio-group">
+                                <input type="radio" name="atividadeFisica" value="sim" id="atividadeFisicaSim"> <label for="atividadeFisicaSim">Sim</label>
+                                <input type="radio" name="atividadeFisica" value="não" id="atividadeFisicaNao"> <label for="atividadeFisicaNao">Não</label>
                             </div>
                         </div>
                     </div>
+
                     <div class="label">
-                        <label for="avaliaçãoDor"> Avaliação de dor (opcional)
-                            <p id="subescrita">Em caso de dor, qual o nível de dor nesse momento de 0 a 10? </p>
-                            <div id="botão">
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="1">
-                                    <span>1</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="2">
-                                    <span>2</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="3">
-                                    <span>3</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="4">
-                                    <span>4</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="5">
-                                    <span>5</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="6">
-                                    <span>6</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="7">
-                                    <span>7</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="8">
-                                    <span>8</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="9">
-                                    <span>9</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name="avaliaçãoDor" value="10">
-                                    <span>10</span>
-                                </label>
-                            </div>
-                        </label>
+                        <label for="avaliacaoDor">Avaliação de dor (opcional)</label>
+                        <p id="subescrita">Em caso de dor, qual o nível de dor nesse momento de 0 a 10? </p>
+                        <div class="radio-scale-group" id="radioDorGroup">
+                            <label><input type="radio" name="avaliacaoDor" value="0"><span>0</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="1"><span>1</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="2"><span>2</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="3"><span>3</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="4"><span>4</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="5"><span>5</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="6"><span>6</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="7"><span>7</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="8"><span>8</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="9"><span>9</span></label>
+                            <label><input type="radio" name="avaliacaoDor" value="10"><span>10</span></label>
+                        </div>
                     </div>
+
                     <div class="label">
-                        <button type="submit" id="abrirDialog">ENVIAR</button>
+                        <button type="submit" id="submitFormButton">ENVIAR</button>
                     </div>
                 </form>
+
+            </div>
         </main>
         <footer>
             <p class="aviso">*Este chat não substitui o atendimento presencial em casos graves.</p>
         </footer>
     </div>
-    </div>
-    <div id="overlay"></div>
+
+    <div id="overlay" style="display: none;"></div>
     <dialog id="dialog">
         <div class="dialog-container">
             <div class="dialog-header">
@@ -152,7 +150,7 @@
                 </div>
             </div>
             <div class="dialog-body">
-                <p>Agradecemos pelas informções. Aguarde, você sera atendido em breve</p>
+                <p>Agradecemos pelas informações. Aguarde, você será atendido em breve</p>
                 <div class="dialog-flex">
                     <div class="dialog-image">
                         <img src="imagens/icon_pessoa.png" alt="icone de pessoa" id="icone-pessoa">
@@ -164,65 +162,10 @@
             </div>
             <div class="dialog-actions">
                 <button id="closeDialog" class="btn-cancelar">Cancelar</button>
-                <a href="../ficha individual-recepcao/fichaR.html"><button id="seguir" class="btn-confirmar">Confirmar</button></a>
+                <button id="confirmDialog" class="btn-confirmar" type="submit">Confirmar</button>
             </div>
+
         </div>
     </dialog>
 
-    <script>
-        //Cofiguraçao dos botoes do dialog e para abrir o dialog
-        const dialog = document.getElementById('dialog');
-        const btnAbrir = document.getElementById('abrirDialog');
-        const btnFechar = document.getElementById('closeDialog');
-
-        btnAbrir.addEventListener('click', (e) => {
-            e.preventDefault(); // impede o envio do formulário
-            dialog.showModal(); // abre o dialog
-        });
-
-        btnFechar.addEventListener('click', () => {
-            dialog.close(); // fecha o dialog pelo cancelar
-        });
-
-        fecharDialog.addEventListener('click', () => {
-            dialog.close(); // fecha o dialog pelo x
-        });
-
-        //controlar o desfoque do fundo
-        const overlay = document.getElementById('overlay');
-
-        btnAbrir.addEventListener('click', () => {
-            overlay.style.display = 'block';
-            dialog.showModal();
-        });
-
-        btnFechar.addEventListener('click', () => {
-            dialog.close();
-            overlay.style.display = 'none';
-        });
-
-        fecharDialog.addEventListener('click', () => {
-            dialog.close();
-            overlay.style.display = 'none';
-        });
-
-        btnConfirmar.addEventListener('click', () => {
-            overlay.style.display = 'none';
-            formulario.submit();
-        });
-
-        // Seleciona todos os spans dentro do botão
-        const spans = document.querySelectorAll('#botão span');
-
-        // Adiciona um evento de clique para cada span
-        spans.forEach(span => {
-            span.addEventListener('click', () => {
-                // Alterna a classe 'marcado' no span clicado
-                span.classList.toggle('marcado');
-            });
-        });
-    </script>
-
-</body>
-
-</html>
+    <script src="script.js"></script>
